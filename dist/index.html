@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" defer></script>
+    <title>Time Tracker</title>
+  </head>
+  <body class="bg-slate-900 text-white h-screen grid place-items-center">
+    <div class="container mx-auto">
+      <div id="time-tracker-cards" class="grid grid-cols-4 grid-rows-2 gap-7">
+        <div class="row-span-2 rounded-lg bg-indigo-900">
+          <div class="rounded-lg bg-indigo-600 p-7">
+            <img
+              class="rounded-full border-2 border-white mb-7"
+              width="80"
+              height="80"
+              src="https://picsum.photos/150/150"
+              alt=""
+            />
+            <span class="block">Report for</span>
+            <span class="block text-5xl">Franco Nienow</span>
+          </div>
+          <div class="flex flex-col items-start gap-3 p-7">
+            <button class="text-lg">Daily</button>
+            <button class="text-lg">Weekly</button>
+            <button class="text-lg">Monthly</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
