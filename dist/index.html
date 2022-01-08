@@ -4,29 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dvoxouxxn/image/upload/v1641597607/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
     <script src="main.js" defer></script>
     <title>Time Tracker</title>
   </head>
   <body class="bg-slate-900 text-white h-screen grid place-items-center">
-    <div class="container mx-auto">
-      <div id="trackers" class="grid grid-cols-4 grid-rows-2 gap-7">
-        <div class="row-span-2 rounded-lg bg-indigo-900">
-          <div class="rounded-lg bg-indigo-600 p-7">
+    <div class="container py-8 lg:py-0">
+      <div
+        id="trackers"
+        class="grid grid-cols-1 lg:grid-cols-4 grid-rows-2 gap-7"
+      >
+        <div class="flex flex-col row-span-2 rounded-xl bg-indigo-900">
+          <div
+            class="lg:grow flex lg:flex-col gap-4 lg:gap-7 rounded-xl bg-indigo-600 p-7"
+          >
             <img
-              class="rounded-full border-2 border-white mb-7"
+              class="rounded-full border-2 border-white self-start"
               width="80"
               height="80"
               src="https://res.cloudinary.com/dvoxouxxn/image/upload/v1641597609/image-jeremy.png"
               alt="Jeremy Robson"
             />
-            <span class="block">Report for</span>
-            <span class="block text-5xl">Jeremy Robson</span>
+            <div class="self-center">
+              <span class="block text-gray-400 mb-3">Report for</span>
+              <span class="block text-3xl lg:text-5xl">Jeremy Robson</span>
+            </div>
           </div>
-          <div id="trackers-period-filter" class="flex flex-col items-start gap-3 p-7">
-            <button data-period-id="1" class="text-lg">Daily</button>
-            <button data-period-id="2" class="text-lg">Weekly</button>
-            <button data-period-id="3" class="text-lg">Monthly</button>
+          <div
+            id="trackers-period-filter"
+            class="flex justify-between lg:flex-col lg:items-start gap-3 p-7 text-gray-400"
+          >
+            <button data-period-id="1" class="text-lg hover:text-white">Daily</button>
+            <button data-period-id="2" class="text-lg hover:text-white">Weekly</button>
+            <button data-period-id="3" class="text-lg hover:text-white">Monthly</button>
           </div>
         </div>
       </div>

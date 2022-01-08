@@ -1,7 +1,13 @@
 module.exports = {
-  content: ["./dist/index.html", './src/main.js', './src/data/db.json'],
+  content: ["./dist/**/*.{json,html}", "./src/**/*.js"],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ['"Rubik"', "sans-serif"],
+    },
+    container: {
+      center: true,
+      padding: "2rem",
+    },
   },
   plugins: [],
-}
+};

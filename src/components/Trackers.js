@@ -2,19 +2,21 @@ export default class Trackers {
   constructor(el) {
     this.el = el;
     this.data = [];
-    this.dataURL = "http://localhost:3000/posts";
     this.periods = [
       {
         id: 1,
-        label: "daily",
+        title: "Day",
+        key: "daily",
       },
       {
         id: 2,
-        label: "weekly",
+        title: "Week",
+        key: "weekly",
       },
       {
         id: 3,
-        label: "monthly",
+        title: "Month",
+        key: "monthly",
       },
     ];
     this.init();
@@ -27,7 +29,7 @@ export default class Trackers {
   }
 
   async getData() {
-    const res = await fetch("http://localhost:3000/posts");
+    const res = await fetch("/db.json");
     const json = await res.json();
     return json;
   }
@@ -38,6 +40,8 @@ export default class Trackers {
     );
     filters.forEach((filter) => {
       filter.addEventListener("click", () => {
+        filters.forEach(filter => filter.classList.remove('text-white'));
+        filter.classList.add("text-white");
         this.clearGrid();
         this.renderCards(this.data, filter.dataset["periodId"]);
       });
@@ -51,8 +55,9 @@ export default class Trackers {
         color: tracker.meta.color,
         icon: tracker.meta.icon,
         title: tracker.title,
-        current: tracker.timeframes[period.label].current,
-        previous: tracker.timeframes[period.label].previous,
+        current: tracker.timeframes[period.key].current,
+        previous: tracker.timeframes[period.key].previous,
+        period: period.title,
       });
     });
   }
@@ -63,19 +68,21 @@ export default class Trackers {
 
   appendCard(data) {
     const template = `
-      <div class="relative rounded-lg ${data.color} pt-11">
-        <img class="absolute right-0 top-0" src="${data.icon}" width="60" height="60">
-        <div class="relative rounded-lg bg-indigo-900 p-7">
-          <div class="flex justify-between items-center pb-7">
+      <div class="relative rounded-xl ${data.color} pt-12">
+        <img class="absolute top-0 right-7" src="${data.icon}" width="75">
+        <div class="relative rounded-xl bg-indigo-900 hover:bg-indigo-800 cursor-pointer p-7">
+          <div class="flex justify-between items-center pb-3 lg:pb-7">
             <span class="font-semibold">${data.title}</span>
-            <a href="#" class="p-3">
+            <div class="cursor-pointer p-3">
               <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
               </svg>
-            </a>
+            </div>
           </div>
-          <span class="block text-6xl pb-4">${data.current}hrs</span>
-          <span class="block text-gray-300">${data.previous}hrs</span>
+          <div class="flex justify-between items-center gap-3 lg:flex-col lg:items-start">
+            <span class="block text-3xl lg:text-6xl">${data.current}hrs</span>
+            <span class="block text-gray-400">Last ${data.period} ${data.previous}hrs</span>
+          </div>
         </div>
       </div>
     `;
