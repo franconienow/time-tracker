@@ -10,23 +10,23 @@
   </head>
   <body class="bg-slate-900 text-white h-screen grid place-items-center">
     <div class="container mx-auto">
-      <div id="time-tracker-cards" class="grid grid-cols-4 grid-rows-2 gap-7">
+      <div id="trackers" class="grid grid-cols-4 grid-rows-2 gap-7">
         <div class="row-span-2 rounded-lg bg-indigo-900">
           <div class="rounded-lg bg-indigo-600 p-7">
             <img
               class="rounded-full border-2 border-white mb-7"
               width="80"
               height="80"
-              src="https://picsum.photos/150/150"
-              alt=""
+              src="https://res.cloudinary.com/dvoxouxxn/image/upload/v1641597609/image-jeremy.png"
+              alt="Jeremy Robson"
             />
             <span class="block">Report for</span>
-            <span class="block text-5xl">Franco Nienow</span>
+            <span class="block text-5xl">Jeremy Robson</span>
           </div>
-          <div class="flex flex-col items-start gap-3 p-7">
-            <button class="text-lg">Daily</button>
-            <button class="text-lg">Weekly</button>
-            <button class="text-lg">Monthly</button>
+          <div id="trackers-period-filter" class="flex flex-col items-start gap-3 p-7">
+            <button data-period-id="1" class="text-lg">Daily</button>
+            <button data-period-id="2" class="text-lg">Weekly</button>
+            <button data-period-id="3" class="text-lg">Monthly</button>
           </div>
         </div>
       </div>

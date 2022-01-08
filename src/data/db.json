@@ -17,7 +17,7 @@
         }
       },
       "meta": {
-        "icon": "icon-work",
+        "icon": "https://res.cloudinary.com/dvoxouxxn/image/upload/v1641597609/icon-work.svg",
         "color": "bg-orange-500"
       }
     },
@@ -38,7 +38,7 @@
         }
       },
       "meta": {
-        "icon": "icon-play",
+        "icon": "https://res.cloudinary.com/dvoxouxxn/image/upload/v1641597607/icon-play.svg",
         "color": "bg-sky-500"
       }
     },
@@ -59,7 +59,7 @@
         }
       },
       "meta": {
-        "icon": "icon-study",
+        "icon": "https://res.cloudinary.com/dvoxouxxn/image/upload/v1641597607/icon-study.svg",
         "color": "bg-rose-500"
       }
     },
@@ -80,7 +80,7 @@
         }
       },
       "meta": {
-        "icon": "icon-exercise",
+        "icon": "https://res.cloudinary.com/dvoxouxxn/image/upload/v1641597607/icon-exercise.svg",
         "color": "bg-green-400"
       }
     },
@@ -101,7 +101,7 @@
         }
       },
       "meta": {
-        "icon": "icon-social",
+        "icon": "https://res.cloudinary.com/dvoxouxxn/image/upload/v1641597607/icon-social.svg",
         "color": "bg-purple-600"
       }
     },
@@ -122,7 +122,7 @@
         }
       },
       "meta": {
-        "icon": "icon-self-care",
+        "icon": "https://res.cloudinary.com/dvoxouxxn/image/upload/v1641597607/icon-self-care.svg",
         "color": "bg-amber-300"
       }
     }
